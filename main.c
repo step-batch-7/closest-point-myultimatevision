@@ -3,6 +3,8 @@
 
 #define POINT struct Point
 
+void print_organism_and_food(struct Point, struct Point);
+
 int main(void)
 {
   POINT food_points[] = {{18, 76}, {19, 66}, {89, 57}, {9, 71}, {55, 38}};
@@ -10,6 +12,12 @@ int main(void)
   POINT current_location = {69, 7};
   POINT closest_food_location = {18, 76};
   get_closest_food(food_points, points_length, current_location, &closest_food_location);
-  printf("%d %d\n", closest_food_location.x, closest_food_location.y);
+  print_organism_and_food(current_location, closest_food_location);
   return 0;
+}
+
+void print_organism_and_food(struct Point current_location, struct Point closest_food_location)
+{
+  printf("Location of organism {%d %d}\n", current_location.x, current_location.y);
+  printf("Location of closest food {%d %d}\n", closest_food_location.x, closest_food_location.y);
 }
