@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include "point.h"
 
-#define POINT struct Point
-
-void print_organism_and_food(struct Point, struct Point);
+void print_organism_and_food(POINT, POINT);
 
 int main(void)
 {
@@ -16,7 +14,7 @@ int main(void)
   return 0;
 }
 
-void print_organism_and_food(struct Point current_location, struct Point closest_food_location)
+void print_organism_and_food(POINT current_location, POINT closest_food_location)
 {
   printf("Location of organism {%d %d}\n", current_location.x, current_location.y);
   printf("Location of closest food {%d %d}\n", closest_food_location.x, closest_food_location.y);

@@ -1,7 +1,7 @@
 #include <math.h>
 #include "point.h"
 
-void get_closest_food(struct Point food_points[], int points_length, struct Point current_location, struct Point *closest_food_location)
+void get_closest_food(POINT food_points[], int points_length, POINT current_location, POINT *closest_food_location)
 {
   double distance_from_current_food, distance_from_closest_food;
   int dx, dy;
