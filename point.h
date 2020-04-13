@@ -12,6 +12,8 @@ Location of organism: [69 7],   Closest food target : [55 38]
 Location of organism: [10 94],  Closest food target : [18 76]
 Location of organism: [36 27],  Closest food target : [55 38]
 */
+#define DISTANCE_FORMULA sqrt(pow(dx, 2) + pow(dy, 2))
+
 typedef struct
 {
   int x;
