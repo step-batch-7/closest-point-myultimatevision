@@ -6,7 +6,7 @@ double find_distance_between(POINT point_a, POINT point_b)
   int dx, dy;
   dx = point_a.x - point_b.x;
   dy = point_a.y - point_b.y;
-  return DISTANCE_FORMULA;
+  return sqrt(pow(dx, 2) + pow(dy, 2));
 }
 
 void get_closest_food(POINT food_points[], int points_length, POINT current_location, POINT *closest_food_location)
